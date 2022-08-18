@@ -33,7 +33,7 @@ const RestaurantScreen = () => {
     });
   }, []);
   return (
-    <ScrollView>
+    <View className="flex-1">
       <View className="relative">
         <Image
           source={{
@@ -73,8 +73,8 @@ const RestaurantScreen = () => {
           <ChevronRightIcon color="#00CCBB" />
         </TouchableOpacity>
       </View>
-      <View>
-        <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menu</Text>
+      <ScrollView className="flex-1">
+        <Text className="px-4 pt-6 mb-3 font-bold text-xl">Menus</Text>
         {/* Dish rows */}
         {dishes?.map((dish) => (
           <DishRow
@@ -86,8 +86,8 @@ const RestaurantScreen = () => {
             image={dish.image}
           />
         ))}
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 };
 
